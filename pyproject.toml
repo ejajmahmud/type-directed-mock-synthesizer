@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "type-directed-mock-synthesizer"
+version = "0.1.0"
+description = "Pure-Python type introspection and synthetic mock data generator for typed dataclasses and schemas"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+type-directed-mock-synthesizer = "type_directed_mock_synthesizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["type_directed_mock_synthesizer*"]
